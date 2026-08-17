@@ -1,0 +1,549 @@
+/* Wegweiser Bonn – finale Website */
+:root{--navy:#1c2f4a;--red:#d6282f;--red-dark:#ac1d24;--blue:#173f6b;--light:#f5f7fa;--line:#dfe4eb;--text:#202734;--muted:#5d6676;--max:1180px;--bottom:76px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);background:#fff;line-height:1.58;padding-bottom:var(--bottom)}img{max-width:100%;display:block}a{color:var(--navy)}a:hover{color:var(--red)}h1,h2,h3{color:var(--navy);line-height:1.2;margin:0 0 1rem}h1{font-size:clamp(2rem,4vw,3.2rem)}h2{font-size:clamp(1.65rem,3vw,2.45rem)}h3{font-size:1.25rem}.container{width:min(100% - 40px,var(--max));margin:auto}.skip-link{position:absolute;left:-9999px;top:0}.skip-link:focus{left:16px;top:16px;background:#fff;padding:10px;z-index:9999}.site-header{background:#fff;border-bottom:1px solid var(--line);padding:22px 0 18px}.header-logo{width:min(440px,78vw);height:auto;margin:auto}.main-wrap{margin-right:300px}.section{padding:68px 0}.section-alt{background:var(--light)}.eyebrow{display:block;color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.45rem}.intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}.intro-image{grid-column:1;grid-row:1}.intro-copy{grid-column:2;grid-row:1}.intro-copy p{font-size:1.08rem}.intro-image img{width:100%;aspect-ratio:16/10;object-fit:cover}.three-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.feature-card{border-top:5px solid var(--red);background:#fff;padding:24px;box-shadow:0 3px 14px rgba(28,47,74,.08);display:flex;flex-direction:column;min-height:100%}.feature-card p{color:var(--muted);flex:1}.feature-link{display:block;margin-top:18px;text-decoration:none}.feature-link img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .2s ease}.feature-link:hover img{transform:scale(1.015)}.feature-link span{display:inline-block;margin-top:12px;color:var(--red);font-weight:800}.side-contact{position:fixed;right:22px;top:150px;width:255px;z-index:700;background:#fff;border:1px solid var(--line);box-shadow:0 4px 20px rgba(0,0,0,.12);transition:opacity .2s ease,visibility .2s ease}.side-contact.is-footer-visible{opacity:0;visibility:hidden;pointer-events:none}.side-contact .chat-img{width:100%;height:auto}.side-contact-content{padding:22px 18px 20px}.side-label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:800;margin-top:18px}.side-label:first-child{margin-top:0}.side-phone,.side-email{display:block;font-weight:800;text-decoration:none;margin-top:8px;white-space:nowrap}.side-phone{font-size:1.15rem;color:var(--red)}.side-email{font-size:.84rem;letter-spacing:-.01em}.online-bar{position:fixed;left:0;right:0;bottom:0;z-index:900;background:var(--blue);color:#fff;min-height:var(--bottom);display:flex;align-items:center;box-shadow:0 -2px 12px rgba(0,0,0,.18)}.online-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.online-bar strong{font-size:1.15rem}.online-bar span{opacity:.9}.online-btn{background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:12px 20px;border:2px solid #fff;white-space:nowrap}.online-btn:hover{background:var(--red-dark);color:#fff}.site-footer{background:#fff;border-top:1px solid var(--line)}.footer-main{padding:58px 0 42px}.footer-logos{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:center;margin-bottom:44px}.footer-logo{max-height:120px;width:100%;object-fit:contain}.footer-logo.eva{max-height:145px}.footer-logo.ministry{max-height:165px}.footer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:48px}.footer-contact a{display:block;margin:.35rem 0;font-weight:700}.footer-chat{display:inline-block;margin-top:8px;color:var(--navy);text-decoration:underline;text-underline-offset:3px;font-weight:800}.footer-chat:hover{color:var(--red)}.footer-links{list-style:none;margin:0;padding:0}.footer-links li{margin:.5rem 0}.footer-bottom{background:var(--navy);color:#fff;padding:16px 0}.footer-bottom-inner{display:flex;justify-content:space-between;gap:20px}.footer-bottom a{color:#fff}.page-hero{padding:48px 0 28px;background:var(--light)}.page-content{padding:52px 0}.page-content h2{margin-top:2rem}.prose{max-width:850px}.prose p,.prose li{font-size:1.05rem}.back-link{display:inline-block;margin-bottom:22px;font-weight:700}.faq-list{max-width:900px}.faq-item{border-bottom:1px solid var(--line)}.faq-question{width:100%;border:0;background:none;padding:20px 0;display:flex;justify-content:space-between;text-align:left;font-size:1.08rem;font-weight:800;color:var(--navy);cursor:pointer}.faq-answer{display:none;padding:0 0 20px}.faq-answer[data-open="true"]{display:block}.legal-page .main-wrap{margin-left:0;margin-right:0}.legal-page .site-header{padding:16px 0}.legal-page .header-logo{width:min(320px,70vw)}.legal-page main{padding:44px 0}.legal-page main .container{max-width:900px}.mobile-contact{display:none}
+@media(max-width:1100px){.main-wrap{margin-right:0}.side-contact{display:none}.mobile-contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff;border-bottom:1px solid var(--line);padding:14px 20px}.mobile-contact a{font-weight:800;text-decoration:none;overflow-wrap:anywhere}.three-cols{grid-template-columns:1fr}.intro-grid{grid-template-columns:1fr}.intro-image,.intro-copy{grid-column:auto;grid-row:auto}.intro-image{order:-1}.footer-logos{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.online-bar span{display:none}}
+@media(max-width:700px){:root{--bottom:90px}.container{width:min(100% - 28px,var(--max))}.site-header{padding:14px 0}.header-logo{width:min(330px,88vw)}.section{padding:46px 0}.mobile-contact{grid-template-columns:1fr}.online-bar-inner{align-items:center}.online-bar strong{font-size:1rem}.online-btn{padding:10px 12px}.footer-logos,.footer-grid{grid-template-columns:1fr}.footer-logo.eva{max-height:120px}.footer-bottom-inner{flex-direction:column}.three-cols{gap:22px}}
+
+/* Final refinements: compact floating contact card, balanced headings, full-width footer */
+@media (min-width:1101px){
+  .main-wrap{margin-right:260px}
+  .side-contact{right:18px;top:150px;width:215px}
+  .side-contact-content{padding:18px 14px 17px}
+  .side-label{margin-top:14px}
+  .side-phone{font-size:1rem}
+  .side-email{font-size:.78rem;letter-spacing:-.025em;color:var(--red)}
+  .main-wrap>.site-footer{width:calc(100% + 260px)}
+}
+.feature-card h2{font-size:clamp(1.35rem,2.1vw,1.85rem)}
+.page-hero h1{font-size:clamp(1.75rem,3vw,2.5rem)}
+.page-content h2{font-size:clamp(1.3rem,2vw,1.75rem)}
+
+/* Final refinement v4: sharper chat card, compact detail pages, aligned footer */
+.side-chat-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:166px;
+  padding:14px 10px 12px;
+  background:#e60000;
+  color:#fff;
+  text-decoration:none;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.side-chat-card:hover,.side-chat-card:focus-visible{background:#cf0000;color:#fff}
+.side-chat-title{font-size:1.05rem;font-weight:900;letter-spacing:.01em;line-height:1.1}
+.side-chat-symbol{position:relative;display:flex;align-items:center;justify-content:center;width:118px;height:68px}
+.side-chat-bubble{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100px;
+  height:58px;
+  background:#fff;
+  color:var(--navy);
+  border:3px solid #fff;
+  border-radius:8px;
+  font-size:1.9rem;
+  font-weight:900;
+  line-height:1;
+  box-shadow:0 0 0 2px rgba(255,255,255,.95);
+}
+.side-chat-bubble::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  bottom:-13px;
+  width:0;
+  height:0;
+  border-top:14px solid #fff;
+  border-right:18px solid transparent;
+}
+.side-chat-subtitle{font-size:.86rem;font-weight:800;line-height:1.15;white-space:nowrap}
+
+@media (min-width:1101px){
+  .side-contact{width:235px}
+  .main-wrap{margin-right:280px}
+  .side-contact-content{padding:18px 16px 18px}
+  .side-email{font-size:.92rem;letter-spacing:-.035em;color:var(--red)}
+  .side-phone{font-size:1.05rem}
+  .main-wrap>.site-footer{width:calc(100% + 280px)}
+  .online-bar .container{width:100%;max-width:none;padding-left:40px;padding-right:18px}
+  .online-btn{width:235px;text-align:center;justify-content:center}
+}
+
+.page-hero{padding:28px 0 18px}
+.page-hero h1{font-size:clamp(1.55rem,2.4vw,2.05rem);margin-bottom:.35rem}
+.page-hero .eyebrow{margin-bottom:.25rem}
+.page-hero .back-link{margin-bottom:12px}
+.page-content{padding:30px 0 38px}
+.page-content .prose{max-width:820px}
+.page-content h2{font-size:clamp(1.18rem,1.7vw,1.5rem);margin:1.25rem 0 .4rem}
+.page-content p{margin:0 0 .8rem}
+.page-content ul{margin:.35rem 0 .9rem;padding-left:1.25rem}
+.page-content li{margin:.18rem 0}
+.prose p,.prose li{font-size:1rem;line-height:1.55}
+
+.footer-logos,.footer-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px}
+.footer-logos{align-items:center}
+.footer-logo{width:auto;max-width:100%;margin:0}
+.footer-logo:first-child{justify-self:start;max-width:290px}
+.footer-logo.eva{justify-self:center;max-width:430px}
+.footer-logo.ministry{justify-self:center;max-width:390px;max-height:190px}
+.footer-grid>div:first-child{text-align:left}
+.footer-grid>div:nth-child(2),.footer-grid>div:nth-child(3){text-align:left}
+.footer-contact a,.footer-chat{color:var(--red)}
+.footer-contact a:hover,.footer-chat:hover{color:var(--red-dark)}
+
+@media(max-width:1100px){
+  .footer-logos,.footer-grid{grid-template-columns:1fr 1fr}
+  .footer-logo:first-child,.footer-logo.eva,.footer-logo.ministry{justify-self:start}
+}
+@media(max-width:700px){
+  .footer-logos,.footer-grid{grid-template-columns:1fr}
+  .footer-logo:first-child,.footer-logo.eva,.footer-logo.ministry{justify-self:start}
+}
+
+/* Final refinement v5: footer alignment and floating contact readability */
+@media (min-width:1101px){
+  /* Keep the e-mail prominent while preserving a single line. */
+  .side-email{
+    font-size:1rem;
+    letter-spacing:-.055em;
+    white-space:nowrap;
+  }
+
+  /* Use the same left reference line for the first footer column and
+     the fixed Online-Beratung text. */
+  .footer-main>.container,
+  .online-bar .container,
+  .footer-bottom .container{
+    width:100%;
+    max-width:none;
+    padding-left:40px;
+    padding-right:18px;
+  }
+
+  /* One shared three-column geometry for logos and the content below. */
+  .footer-logos,
+  .footer-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    column-gap:54px;
+  }
+
+  .footer-logo:first-child{
+    justify-self:start;
+    margin-left:0;
+  }
+
+  /* Center eva between the outer logo columns. */
+  .footer-logo.eva{
+    justify-self:center;
+    margin-left:0;
+  }
+
+  /* Ministry and Rechtliches use exactly the same left reference. */
+  .footer-logo.ministry{
+    justify-self:start;
+    margin-left:0;
+  }
+  .footer-grid>div:first-child{
+    justify-self:start;
+    width:100%;
+  }
+  .footer-grid>div:nth-child(2){
+    justify-self:center;
+    width:max-content;
+    max-width:100%;
+  }
+  .footer-grid>div:nth-child(3){
+    justify-self:start;
+    width:100%;
+  }
+
+  /* Align the eva credit with the fixed chat button without moving it. */
+  .footer-bottom-inner{
+    width:100%;
+    max-width:none;
+    align-items:center;
+  }
+  .footer-bottom-inner>span:last-child{
+    width:235px;
+    margin-left:auto;
+    text-align:center;
+    flex:0 0 235px;
+  }
+}
+
+/* Final refinement v6: even footer spacing */
+@media (min-width:1101px){
+  .footer-logos,
+  .footer-grid{
+    column-gap:36px;
+  }
+
+  /* Align the eva logo and its link column to the beginning of the
+     middle grid column, reducing the excessive visual gap to Wegweiser. */
+  .footer-logo.eva{
+    justify-self:start;
+    margin-left:0;
+  }
+
+  .footer-grid>div:nth-child(2){
+    justify-self:start;
+    width:100%;
+    max-width:none;
+  }
+}
+
+/* Final refinement v9: move the eva logo a further 1.5 cm to the left on desktop. */
+@media (min-width:1101px){
+  .footer-logo.eva{
+    transform:translateX(calc(-76px - 1.5cm));
+  }
+}
+
+/* Responsive large-screen refinement v10: footer aligns with the three content columns,
+   logos scale up without drifting, and the floating contact card docks at the footer. */
+@media (min-width:1101px){
+  /* Keep the footer grid on exactly the same horizontal reference as the main content
+     area, which is reduced by the 260px right contact rail. */
+  body:not(.legal-page) .footer-main>.container{
+    width:min(1180px, calc(100vw - 300px));
+    max-width:1180px;
+    margin-left:max(20px, calc((100vw - 260px - 1180px) / 2));
+    margin-right:auto;
+    padding-left:0;
+    padding-right:0;
+  }
+
+  body:not(.legal-page) .footer-logos,
+  body:not(.legal-page) .footer-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    column-gap:30px;
+  }
+
+  /* Each footer logo is centered under the corresponding main-page column. */
+  body:not(.legal-page) .footer-logo:first-child,
+  body:not(.legal-page) .footer-logo.eva,
+  body:not(.legal-page) .footer-logo.ministry{
+    justify-self:center;
+    transform:none;
+    margin-left:0;
+    width:auto;
+    height:auto;
+  }
+
+  body:not(.legal-page) .footer-logo:first-child{
+    max-width:min(76%,300px);
+    max-height:none;
+  }
+  body:not(.legal-page) .footer-logo.eva{
+    max-width:min(96%,390px);
+    max-height:none;
+  }
+  body:not(.legal-page) .footer-logo.ministry{
+    max-width:100%;
+    max-height:none;
+  }
+
+  /* Link columns use the same three-column geometry as the logos above. */
+  body:not(.legal-page) .footer-grid>div:first-child,
+  body:not(.legal-page) .footer-grid>div:nth-child(2),
+  body:not(.legal-page) .footer-grid>div:nth-child(3){
+    justify-self:stretch;
+    width:100%;
+    max-width:none;
+  }
+
+  /* Legal pages have no floating contact rail, so use a centered full-width footer grid. */
+  .legal-page .footer-main>.container{
+    width:min(1180px, calc(100% - 40px));
+    max-width:1180px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:0;
+    padding-right:0;
+  }
+  .legal-page .footer-logos,
+  .legal-page .footer-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    column-gap:30px;
+  }
+  .legal-page .footer-logo:first-child,
+  .legal-page .footer-logo.eva,
+  .legal-page .footer-logo.ministry{
+    justify-self:center;
+    transform:none;
+    margin-left:0;
+    width:auto;
+    height:auto;
+  }
+  .legal-page .footer-logo:first-child{max-width:min(76%,300px);max-height:none}
+  .legal-page .footer-logo.eva{max-width:min(96%,390px);max-height:none}
+  .legal-page .footer-logo.ministry{max-width:100%;max-height:none}
+
+  /* The contact card remains fixed while reading and stops immediately above the footer
+     rather than disappearing as soon as the footer first intersects the viewport. */
+  .side-contact{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+  .side-contact.is-footer-visible{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+  .side-contact.is-docked{
+    position:absolute;
+  }
+}
+
+@media (min-width:1600px){
+  /* Scale logos slightly on large monitors while preserving their column alignment. */
+  body:not(.legal-page) .footer-logo:first-child,
+  .legal-page .footer-logo:first-child{max-width:min(82%,320px)}
+  body:not(.legal-page) .footer-logo.eva,
+  .legal-page .footer-logo.eva{max-width:min(100%,410px)}
+}
+
+/* Final refinement v11: legal-page typography and first footer-column alignment */
+/* Match Impressum, Datenschutz and Barrierefreiheit typography to the detail pages
+   (Unser Angebot / Unsere Ziele) without changing their text content. */
+.legal-page main .container{
+  max-width:850px;
+  font-family:inherit;
+}
+.legal-page main h1{
+  font-size:clamp(1.75rem,3vw,2.5rem);
+  line-height:1.2;
+}
+.legal-page main h2{
+  font-size:clamp(1.18rem,1.7vw,1.5rem);
+  line-height:1.2;
+  margin:1.25rem 0 .4rem;
+}
+.legal-page main p,
+.legal-page main li{
+  font-size:1.05rem;
+  line-height:1.58;
+}
+.legal-page main p{margin:0 0 .8rem}
+.legal-page main ul{margin:.35rem 0 .9rem;padding-left:1.25rem}
+.legal-page main li{margin:.18rem 0}
+
+@media (min-width:1101px){
+  /* The left edge of the Wegweiser footer logo and all contact information below it
+     uses exactly the same reference line as the left edge of the first content column
+     ("Unser Angebot"). */
+  body:not(.legal-page) .footer-logo:first-child{
+    justify-self:start;
+    margin-left:0;
+    transform:none;
+  }
+  body:not(.legal-page) .footer-grid>div:first-child{
+    justify-self:start;
+    width:100%;
+    margin-left:0;
+    text-align:left;
+  }
+
+  /* Keep the same first-column alignment on legal pages for a consistent footer. */
+  .legal-page .footer-logo:first-child{
+    justify-self:start;
+    margin-left:0;
+    transform:none;
+  }
+  .legal-page .footer-grid>div:first-child{
+    justify-self:start;
+    width:100%;
+    margin-left:0;
+    text-align:left;
+  }
+}
+
+/* Final refinement v12: grouped responsive footer columns and clearer eva logo. */
+.footer-columns{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:30px;
+  align-items:start;
+}
+.footer-column{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.footer-logo-wrap{
+  width:100%;
+  min-height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  margin-bottom:24px;
+}
+.footer-column-body{
+  width:100%;
+  text-align:left;
+}
+.footer-column-body>div{
+  width:100%;
+}
+.footer-column .footer-logo{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:none;
+  margin:0;
+  object-fit:contain;
+  transform:none !important;
+}
+.footer-column-1 .footer-logo{
+  max-width:min(100%,300px);
+}
+.footer-column-2 .footer-logo.eva{
+  max-width:min(100%,470px);
+}
+.footer-column-3 .footer-logo.ministry{
+  max-width:min(100%,430px);
+}
+.footer-column-1 .footer-logo-wrap,
+.footer-column-1 .footer-column-body{
+  padding-left:0;
+}
+.footer-column-2 .footer-logo-wrap,
+.footer-column-3 .footer-logo-wrap{
+  justify-content:center;
+}
+.footer-column-2 .footer-column-body,
+.footer-column-3 .footer-column-body{
+  padding-left:0;
+}
+
+@media (min-width:1101px){
+  body:not(.legal-page) .footer-main>.container{
+    width:min(1180px,calc(100vw - 300px));
+    max-width:1180px;
+    margin-left:max(20px,calc((100vw - 260px - 1180px)/2));
+    margin-right:auto;
+    padding-left:0;
+    padding-right:0;
+  }
+  .legal-page .footer-main>.container{
+    width:min(1180px,calc(100% - 40px));
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline:0;
+  }
+  .footer-columns{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    column-gap:30px;
+  }
+  .footer-column-1 .footer-logo-wrap,
+  .footer-column-1 .footer-column-body{
+    justify-content:flex-start;
+    align-items:flex-start;
+    text-align:left;
+  }
+  /* Eva is intentionally larger, while its column footprint stays unchanged. */
+  .footer-column-2 .footer-logo.eva{
+    max-width:min(118%,500px);
+  }
+}
+
+@media (min-width:1600px){
+  .footer-column-1 .footer-logo{max-width:min(100%,330px)}
+  .footer-column-2 .footer-logo.eva{max-width:min(124%,530px)}
+  .footer-column-3 .footer-logo.ministry{max-width:min(100%,460px)}
+  .footer-logo-wrap{min-height:190px}
+}
+
+@media (max-width:1100px){
+  .footer-columns{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:36px 28px;
+  }
+  .footer-column-3{grid-column:1/-1}
+  .footer-logo-wrap{min-height:145px;margin-bottom:18px}
+  .footer-column-1 .footer-logo{max-width:min(100%,280px)}
+  .footer-column-2 .footer-logo.eva{max-width:min(100%,430px)}
+  .footer-column-3 .footer-logo.ministry{max-width:min(100%,430px)}
+  .footer-column-2 .footer-logo-wrap,
+  .footer-column-3 .footer-logo-wrap{justify-content:flex-start}
+}
+
+@media (max-width:700px){
+  .footer-main{padding:42px 0 32px}
+  .footer-columns{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .footer-column-3{grid-column:auto}
+  .footer-logo-wrap{
+    min-height:0;
+    margin-bottom:14px;
+    justify-content:flex-start !important;
+  }
+  .footer-column-1 .footer-logo{max-width:min(82vw,280px)}
+  .footer-column-2 .footer-logo.eva{max-width:min(92vw,430px)}
+  .footer-column-3 .footer-logo.ministry{max-width:min(92vw,430px)}
+  .footer-column-body,
+  .footer-column-body>div{width:100%}
+  .footer-contact a,
+  .footer-chat{overflow-wrap:anywhere}
+}
+
+/* v13: improve eva-gGmbH footer logo legibility without changing footer column positions. */
+@media (min-width:1101px){
+  body:not(.legal-page) .footer-logo.eva,
+  .legal-page .footer-logo.eva{
+    width:100%;
+    max-width:none;
+    transform:scale(1.32);
+    transform-origin:center center;
+  }
+}
+@media (min-width:701px) and (max-width:1100px){
+  body:not(.legal-page) .footer-logo.eva,
+  .legal-page .footer-logo.eva{
+    width:100%;
+    max-width:none;
+    transform:scale(1.16);
+    transform-origin:center center;
+  }
+}
+@media (max-width:700px){
+  body:not(.legal-page) .footer-logo.eva,
+  .legal-page .footer-logo.eva{
+    width:min(100%,520px);
+    max-width:520px;
+    transform:none;
+  }
+}
+
+/* v14: two-line eva footer lockup for legibility; keep all footer columns in place. */
+.footer-column .footer-logo{transform:none !important;}
+.footer-logo-wrap{align-items:flex-start;}
+.footer-column-2 .footer-logo-wrap{align-items:flex-start;justify-content:center;}
+.footer-column-2 .footer-logo.eva{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  transform:none !important;
+}
+@media (min-width:1600px){
+  .footer-column-2 .footer-logo.eva{width:100%;max-width:100%;}
+}
+@media (max-width:1100px){
+  .footer-column-2 .footer-logo-wrap{justify-content:flex-start;}
+  .footer-column-2 .footer-logo.eva{width:min(100%,520px);max-width:520px;}
+}
+@media (max-width:700px){
+  .footer-column-2 .footer-logo.eva{width:min(94vw,520px);max-width:520px;}
+}
