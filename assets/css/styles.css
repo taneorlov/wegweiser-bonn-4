@@ -547,3 +547,64 @@
 @media (max-width:700px){
   .footer-column-2 .footer-logo.eva{width:min(94vw,520px);max-width:520px;}
 }
+
+
+/* v15: ministry logo only — larger and clearer, without moving footer columns. */
+.footer-column-3 .footer-logo.ministry{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  image-rendering:auto;
+}
+@media (min-width:1600px){
+  .footer-column-3 .footer-logo.ministry{width:100%;max-width:100%;}
+}
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{width:min(100%,520px);max-width:520px;}
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{width:min(94vw,520px);max-width:520px;}
+}
+
+/* v16: Ministry NRW footer logo — visually larger without changing footer grid/positions. */
+@media (min-width:1101px){
+  .footer-column-3 .footer-logo.ministry{
+    width:140%;
+    max-width:none;
+    height:auto;
+    transform:none !important;
+    transform-origin:center top;
+  }
+}
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{
+    width:min(118%,560px);
+    max-width:none;
+    height:auto;
+  }
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{
+    width:min(100%,520px);
+    max-width:520px;
+    height:auto;
+  }
+}
+
+/* v16-ministry: enlarge the complete official Ministry logo proportionally.
+   Only the Ministry image size is changed; footer grid/positions remain untouched. */
+@media (min-width:1101px){
+  body:not(.legal-page) .footer-column-3 .footer-logo.ministry,
+  .legal-page .footer-column-3 .footer-logo.ministry{
+    width:118%;
+    max-width:none;
+    height:auto;
+    transform:none !important;
+  }
+}
+@media (min-width:1600px){
+  body:not(.legal-page) .footer-column-3 .footer-logo.ministry,
+  .legal-page .footer-column-3 .footer-logo.ministry{
+    width:124%;
+  }
+}
