@@ -591,20 +591,228 @@
   }
 }
 
-/* v16-ministry: enlarge the complete official Ministry logo proportionally.
-   Only the Ministry image size is changed; footer grid/positions remain untouched. */
+/* v17: use the complete original Ministry NRW partner logo as one proportional lockup.
+   Only its rendered size is adjusted; footer grid and positions remain unchanged. */
+.footer-column-3 .footer-logo.ministry{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  transform:none !important;
+  image-rendering:auto;
+}
 @media (min-width:1101px){
-  body:not(.legal-page) .footer-column-3 .footer-logo.ministry,
-  .legal-page .footer-column-3 .footer-logo.ministry{
-    width:118%;
-    max-width:none;
-    height:auto;
-    transform:none !important;
+  .footer-column-3 .footer-logo.ministry{
+    width:100%;
+    max-width:100%;
   }
 }
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{
+    width:min(100%,520px);
+    max-width:520px;
+  }
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{
+    width:min(94vw,520px);
+    max-width:520px;
+  }
+}
+
+/* v18: Ministry NRW partner logo — scale the COMPLETE official lockup proportionally.
+   Text and coat of arms stay together; no separate enlargement of the crest. */
+@media (min-width:1101px){
+  .footer-column-3 .footer-logo.ministry{
+    width:150%;
+    max-width:none;
+    height:auto;
+    object-fit:contain;
+  }
+}
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{
+    width:125%;
+    max-width:none;
+    height:auto;
+  }
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{
+    width:100%;
+    max-width:520px;
+    height:auto;
+  }
+}
+
+/* v19: final Ministry NRW partner logo adjustment only.
+   Scale the complete official lockup (text + crest) together, keeping the footer grid unchanged. */
+@media (min-width:1101px){
+  .footer-column-3 .footer-logo.ministry{
+    width:180% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin-left:-40% !important;
+    object-fit:contain !important;
+    image-rendering:auto !important;
+  }
+}
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{
+    width:145% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin-left:-22.5% !important;
+    object-fit:contain !important;
+    image-rendering:auto !important;
+  }
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{
+    width:112% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin-left:-6% !important;
+    object-fit:contain !important;
+    image-rendering:auto !important;
+  }
+}
+
+
+/* v20: IM feedback — safe chat-card margins, image-free category cards and official QR code. */
+.side-chat-card{padding-left:16px;padding-right:16px;overflow:visible}
+.side-chat-title{font-size:1rem;max-width:100%;white-space:nowrap}
+.side-chat-subtitle{font-size:.78rem;max-width:100%;white-space:nowrap}
+.feature-link{margin-top:14px;padding-top:4px}
+.feature-link span{margin-top:0}
+.footer-qr{display:inline-flex;flex-direction:column;align-items:flex-start;gap:7px;margin-top:18px;text-decoration:none;font-weight:700;color:var(--navy)}
+.footer-qr img{width:112px;height:112px;object-fit:contain;image-rendering:auto}
+.footer-qr span{font-size:.9rem;text-decoration:underline;text-underline-offset:3px}
+@media(min-width:1101px){.side-contact{width:245px}.main-wrap{margin-right:290px}.online-btn{width:245px}.side-chat-title{font-size:1rem}.side-chat-subtitle{font-size:.76rem}}
+@media(max-width:700px){.footer-qr img{width:104px;height:104px}}
+
+/* v21: footer correction after IM review — keep partner logos inside their own columns
+   and present the Wegweiser NRW QR code as a compact secondary link. */
+.footer-column-3 .footer-logo.ministry{
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  transform:none !important;
+  object-fit:contain !important;
+}
+.footer-column-3 .footer-logo-wrap{
+  overflow:hidden;
+  justify-content:center;
+}
+.footer-qr{
+  margin-top:16px;
+  gap:6px;
+}
+.footer-qr img{
+  width:88px;
+  height:88px;
+}
+.footer-qr span{
+  font-size:.82rem;
+  line-height:1.25;
+}
 @media (min-width:1600px){
-  body:not(.legal-page) .footer-column-3 .footer-logo.ministry,
-  .legal-page .footer-column-3 .footer-logo.ministry{
-    width:124%;
+  .footer-column-3 .footer-logo.ministry{width:100% !important;max-width:100% !important;}
+  .footer-qr img{width:94px;height:94px}
+}
+@media (max-width:1100px){
+  .footer-column-3 .footer-logo-wrap{justify-content:flex-start}
+  .footer-column-3 .footer-logo.ministry{width:min(100%,430px) !important;max-width:430px !important;}
+}
+@media (max-width:700px){
+  .footer-qr img{width:86px;height:86px}
+}
+
+
+/* v22: QR code occupies the previously unused area to the right of Rechtliches.
+   Existing three footer columns and all partner logos keep their v21 positions. */
+.footer-main{position:relative}
+.footer-qr-slot{
+  position:absolute;
+  right:28px;
+  top:250px;
+  width:190px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  text-align:center;
+}
+.footer-qr-slot .footer-qr{
+  margin:0;
+  align-items:center;
+  gap:8px;
+}
+.footer-qr-slot .footer-qr img{
+  width:112px;
+  height:112px;
+}
+.footer-qr-slot .footer-qr span{
+  max-width:180px;
+  text-align:center;
+}
+@media (min-width:1600px){
+  .footer-qr-slot{right:54px;top:250px;width:210px}
+  .footer-qr-slot .footer-qr img{width:124px;height:124px}
+}
+@media (max-width:1100px){
+  .footer-qr-slot{
+    position:static;
+    width:auto;
+    margin:20px 20px 0;
+    justify-content:flex-start;
+    text-align:left;
+  }
+  .footer-qr-slot .footer-qr{align-items:flex-start}
+  .footer-qr-slot .footer-qr span{text-align:left}
+}
+@media (max-width:700px){
+  .footer-qr-slot{margin:18px 20px 0}
+  .footer-qr-slot .footer-qr img{width:96px;height:96px}
+}
+
+
+/* v25: restore the clear Ministry NRW lockup from the pre-text-change version.
+   Scale the COMPLETE logo proportionally inside its own third footer column. */
+.footer-column-3 .footer-logo-wrap{
+  overflow:visible;
+}
+.footer-column-3 .footer-logo.ministry{
+  display:block;
+  width:118% !important;
+  max-width:none !important;
+  height:auto !important;
+  margin:0 !important;
+  object-fit:contain !important;
+  transform:none !important;
+  image-rendering:auto !important;
+}
+@media (min-width:1600px){
+  .footer-column-3 .footer-logo.ministry{width:124% !important;}
+}
+@media (min-width:701px) and (max-width:1100px){
+  .footer-column-3 .footer-logo.ministry{width:118% !important;max-width:560px !important;}
+}
+@media (max-width:700px){
+  .footer-column-3 .footer-logo.ministry{width:100% !important;max-width:520px !important;}
+}
+
+/* v26: ensure the dark footer bar reaches the viewport's right edge on desktop.
+   The main content reserves 290px for the floating contact panel; extend only the
+   site footer by the same amount. Keep legal pages at their normal full width. */
+@media (min-width:1101px){
+  body:not(.legal-page) .main-wrap>.site-footer{
+    width:calc(100% + 290px);
+  }
+  .legal-page .main-wrap>.site-footer{
+    width:100%;
   }
 }
